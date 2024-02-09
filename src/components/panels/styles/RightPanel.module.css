@@ -1,9 +1,9 @@
 .rightPanel {
+  max-height: 100vh;
+  min-height: 100vh;
 }
 
 .rightPanel pre {
   margin: 0;
-  max-height: 100vh;
-  min-height: 100vh;
-  font-size: small;
+  height: 100%;
 }
