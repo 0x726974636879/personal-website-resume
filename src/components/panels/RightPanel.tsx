@@ -3,16 +3,13 @@ import styles from './styles/RightPanel.module.css';
 
 
 const RightPanel: React.FC = () => {
-	// Simulated Python code for demonstration purposes
 	useEffect(() => {
 			if (window.Prism) {
 					window.Prism.highlightAll();
 			}
 	}, []);
 
-	const pythonCode = `
-from typing import Dict, List
-
+	const pythonCode = `from typing import Dict, List
 
 class Dev:
 	def __init__(self):
@@ -21,15 +18,19 @@ class Dev:
 		self.email: str = "contact@portefine.fr"
 		self.location: str = "Paris - France"
 
-		self.experiences: Dict[str, str] = {
-			"2023": "Cloud Consultant @ Devoteam Revolve",
-			# hello
-			"2023": "SysOps @ Veolia Water Technologies",
-			# hello
+		self.experiences: Dict[str, Any] = {
+			"2023": {
+				"role": "Cloud Consultant @ Devoteam Revolve",
+				"client": "Veolia Water Technologies"
+			},
+			# Reverse osmosis Data distribution management,
+			# Infrastructure Optimization and Management on AWS, Python.
 			"2021-2023": "CloudOps @ Jabmo",
-			# hello
+			# IP-based Identification,
+			# Backend development, API creation, Infrastructure Management on AWS, Python & React Admin.
 			"2018-2021": "CloudOps @ Lineup 7"
-			# hello
+			# Optimize client prospecting solutions,
+			# Backend development, CI/CD pipeline implementation, Python & JavaScript.
 		}
 
 		self.studies: Dict[str, str] = {
@@ -63,8 +64,8 @@ class Dev:
 `;
 
   return (
-    <section className={`${styles.rightPanel} flex-2 text-sm w-[45%]`}>
-        <pre>
+    <section className={`${styles.rightPanel} flex-2 w-[45%] text-[0.7rem]`}>
+        <pre className="flex items-center">
 			    <code className="language-python">{pythonCode}</code>
         </pre>
     </section>
