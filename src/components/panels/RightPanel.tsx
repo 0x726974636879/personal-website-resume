@@ -23,9 +23,13 @@ class Dev:
 
 		self.experiences: Dict[str, str] = {
 			"2023": "Cloud Consultant @ Devoteam Revolve",
+			# hello
 			"2023": "SysOps @ Veolia Water Technologies",
+			# hello
 			"2021-2023": "CloudOps @ Jabmo",
+			# hello
 			"2018-2021": "CloudOps @ Lineup 7"
+			# hello
 		}
 
 		self.studies: Dict[str, str] = {
@@ -46,9 +50,8 @@ class Dev:
 			"Javascript",
 			"SQL"
 		]
-		self.coding_framework: List[str] = [
-			"Django", "Flask", "FastAPI", "Pygame"
-		]
+		self.coding_framework: List[str] = ["Django", "Flask", "FastAPI", "Pygame"]
+
 		self.softwares: List[str] = ["VSCode", "Unix", "Linux", "MacOS"]
 
 		self.links: Dict[str, str] = {
@@ -60,7 +63,7 @@ class Dev:
 `;
 
   return (
-    <section className={`${styles.rightPanel} flex-2 w-1/2 text-sm`}>
+    <section className={`${styles.rightPanel} flex-2 text-sm w-[45%]`}>
         <pre>
 			    <code className="language-python">{pythonCode}</code>
         </pre>

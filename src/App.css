@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Joystix Proportional";
+    src: url("./assets/fonts/joystix.ttf") format("opentype");
+}
+
+
+body {
+    font-family: "Joystix Proportional";
+}
