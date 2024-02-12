@@ -24,7 +24,7 @@ const LeftPanel: React.FC = () => {
           <img className="m-6 w-[50px]" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes" title="Kubernetes"></img>
         </div>
         <h2 className="mt-6 text-[2rem]">Let's work together...</h2>
-        <a className="mt-6 text-yellow-600" href="http://google.fr">How do you take your coffee?</a>
+        <a className="animate-bounce mt-6 text-yellow-600" href="https://www.linkedin.com/in/ritchyb/">How do you take your coffee?</a>
       </div>
     </header>
   );

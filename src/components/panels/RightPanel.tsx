@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import styles from './styles/RightPanel.module.css';
+import React, { useEffect } from "react";
 
 
 const RightPanel: React.FC = () => {
@@ -64,8 +63,8 @@ class Dev:
 `;
 
   return (
-    <section className={`${styles.rightPanel} flex-2 w-[45%] text-[0.7rem]`}>
-        <pre className="flex items-center">
+    <section className="flex-2 w-[45%] text-[0.7rem]">
+        <pre className="flex items-center h-full" style={{"margin": "0"}}>
 			    <code className="language-python">{pythonCode}</code>
         </pre>
     </section>
