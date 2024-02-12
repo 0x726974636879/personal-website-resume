@@ -494,6 +494,9 @@ video {
 .flex {
   display: flex;
 }
+.h-\[100vh\] {
+  height: 100vh;
+}
 .h-full {
   height: 100%;
 }
@@ -515,6 +518,21 @@ video {
 .flex-1 {
   flex: 1 1 0%;
 }
+@keyframes bounce {
+
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8,0,1,1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0,0,0.2,1);
+  }
+}
+.animate-bounce {
+  animation: bounce 1s infinite;
+}
 .flex-col {
   flex-direction: column;
 }
@@ -530,13 +548,16 @@ video {
 .overflow-y-auto {
   overflow-y: auto;
 }
-.rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+.rounded-t-full {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
 }
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+.text-\[0\.7rem\] {
+  font-size: 0.7rem;
 }
 .text-\[2rem\] {
   font-size: 2rem;

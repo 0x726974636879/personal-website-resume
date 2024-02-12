@@ -63,7 +63,7 @@ class Dev:
 `;
 
   return (
-    <section className="flex-2 w-[45%] text-[0.7rem]">
+    <section className="flex-2 xl:w-[45%] text-[0.7rem]">
         <pre className="flex items-center h-full" style={{"margin": "0"}}>
 			    <code className="language-python">{pythonCode}</code>
         </pre>

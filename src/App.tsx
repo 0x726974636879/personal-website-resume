@@ -6,7 +6,7 @@ import RightPanel from './components/panels/RightPanel';
 
 const App: React.FC = () => {
   return (
-      <div className="flex h-[100vh]">
+      <div className="flex sm:max-xl:flex-col xl:h-[100vh]">
         <LeftPanel />
         <RightPanel />
     </div>
