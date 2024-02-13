@@ -5,7 +5,7 @@ import photo from "../../assets/photo.png";
 const LeftPanel: React.FC = () => {
 
   return (
-    <header className={`${styles.leftPanel} flex-1 overflow-y-auto`}>
+    <header className={`${styles.leftPanel} flex-1 overflow-y-auto text-center`}>
       <div className="flex flex-col items-center h-full overflow-y-auto justify-center px-10">
         <img className="max-w-[40%] rounded-t-full shadow-2xl" src={photo} title="First, solve the problem. Then, write the code." alt="Me"></img>
         <h1 className="mt-6">⌘ Hello i'm Ritchy</h1>
