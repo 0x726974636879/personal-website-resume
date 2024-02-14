@@ -1,12 +1,12 @@
 import React from 'react';
-import './tailwind.css';
-import './App.css';
 import LeftPanel from './components/panels/LeftPanel';
 import RightPanel from './components/panels/RightPanel';
+import './tailwind.css';
+import './App.css';
 
 const App: React.FC = () => {
   return (
-      <div className="flex sm:max-xl:flex-col xl:h-[100vh]">
+      <div className="flex sm:max-xl:flex-col xl:h-screen">
         <LeftPanel />
         <RightPanel />
     </div>

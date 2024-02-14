@@ -1,13 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { monokaiSublime } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 
 const RightPanel: React.FC = () => {
-	useEffect(() => {
-			if (window.Prism) {
-					window.Prism.highlightAll();
-			}
-	}, []);
-
 	const pythonCode = `from typing import Dict, List
 
 class Dev:
@@ -63,10 +59,15 @@ class Dev:
 `;
 
   return (
-    <section className="flex-2 xl:w-[45%] text-[0.7rem]">
-        <pre className="flex items-center h-full" style={{"margin": "0"}}>
-			    <code className="language-python">{pythonCode}</code>
-        </pre>
+    <section className="flex-2 xl:w-[45%] h-screen text-[0.7rem] xl:!text-[0.65vw]">
+			<SyntaxHighlighter
+				style={monokaiSublime}
+				showLineNumbers
+				language="python"
+				className="h-full"
+			>
+				{pythonCode}
+			</SyntaxHighlighter>
     </section>
   );
 }
