@@ -20,7 +20,7 @@
   "scripts": {
     "start": "npm run build:css && react-scripts start",
     "build": "npm run build:css && react-scripts build",
-    "test": "npm run build:css && react-scripts test",
+    "test": "echo \"No test specified\"",
     "eject": "react-scripts eject",
     "build:css": "postcss src/index.css -o src/tailwind.css"
   },

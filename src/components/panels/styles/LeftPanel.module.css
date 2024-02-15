@@ -11,7 +11,7 @@
 }
 
 
-.leftPanel div:nth-child(1) {
+.leftPanel {
   background: linear-gradient(120deg,  #2d2d2d, #dffaf9, #ffcbce, #a685a1, #7a6f72, #2d2d2d);
   background-size: 400% 400%;
   animation: gradientBackground 30s ease-in-out infinite;

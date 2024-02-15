@@ -1,17 +1,7 @@
 module.exports = {
-  purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-  darkMode: false,
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: "media",
   theme: {
-    fontSize: {
-      sm: "small",
-    },
-    screens: {
-      "sm": "300px",
-      "md": "768px",
-      "lg": "1024px",
-      "xl": "1280px",
-      "2xl": "1536px",
-    }
   },
   variants: {
     extend: {},

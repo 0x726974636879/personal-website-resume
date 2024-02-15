@@ -6,4 +6,9 @@
 
 body {
     font-family: "Joystix Proportional";
+    background-color: #23241e;
+    height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }

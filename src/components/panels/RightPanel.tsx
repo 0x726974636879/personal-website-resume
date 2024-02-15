@@ -59,12 +59,13 @@ class Dev:
 `;
 
   return (
-    <section className="flex-2 xl:w-[45%] h-screen text-[0.7rem] xl:!text-[0.65vw]">
+    <section className="flex flex-2 justify-center items-center min-w-[50vw]">
 			<SyntaxHighlighter
 				style={monokaiSublime}
 				showLineNumbers
 				language="python"
-				className="h-full"
+				wrapLines
+				className="overflow-x-auto break-words text-[0.8em] max-h-[100vh]"
 			>
 				{pythonCode}
 			</SyntaxHighlighter>

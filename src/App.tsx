@@ -6,7 +6,7 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-      <div className="flex sm:max-xl:flex-col xl:h-screen">
+      <div className="flex flex-col sm:max-md:flex-col xl:flex-row xl:items-center h-full">
         <LeftPanel />
         <RightPanel />
     </div>
