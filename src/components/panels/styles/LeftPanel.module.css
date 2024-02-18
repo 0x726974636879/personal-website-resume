@@ -1,0 +1,18 @@
+@keyframes gradientBackground {
+  0% {
+    background-position: 14% 0%;
+  }
+  50% {
+    background-position: 87% 100%;
+  }
+  100% {
+    background-position: 14% 0%;
+  }
+}
+
+
+.leftPanel {
+  background: linear-gradient(120deg,  #2d2d2d, #dffaf9, #ffcbce, #a685a1, #7a6f72, #2d2d2d);
+  background-size: 400% 400%;
+  animation: gradientBackground 30s ease-in-out infinite;
+}
