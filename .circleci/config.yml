@@ -34,7 +34,7 @@ jobs:
           name: Run tests
           command: npm test
 
-  terraform-validation:
+  terraform_validation:
       executor: aws-cli/default
       steps:
         - checkout
@@ -49,6 +49,24 @@ jobs:
             path: terraform
         - terraform/plan:
             backend_config: "bucket=$TERRAFORM_BACKEND_BUCKET,key=$TERRAFORM_BACKEND_BUCKET_KEY,dynamodb_table=$TERRAFORM_BACKEND_DYNAMODB_TABLE,region=$AWS_DEFAULT_REGION"
+            path: terraform
+        - terraform/apply:
+            backend_config: "bucket=$TERRAFORM_BACKEND_BUCKET, key=$TERRAFORM_BACKEND_BUCKET_KEY, dynamodb_table=$TERRAFORM_BACKEND_DYNAMODB_TABLE, region=$AWS_DEFAULT_REGION"
+            path: terraform
+
+  terraform_apply:
+      executor: aws-cli/default
+      steps:
+        - checkout
+        - aws-cli/install
+        - aws-oidc-setup:
+            aws-role-arn: "arn:aws:iam::$AWS_ACCOUNT_ID:role/OIDC_personal_website_resume"
+        - terraform/install
+        - terraform/init:
+            backend_config: "bucket=$TERRAFORM_BACKEND_BUCKET,key=$TERRAFORM_BACKEND_BUCKET_KEY,dynamodb_table=$TERRAFORM_BACKEND_DYNAMODB_TABLE,region=$AWS_DEFAULT_REGION"
+            path: terraform
+        - terraform/apply:
+            backend_config: "bucket=$TERRAFORM_BACKEND_BUCKET, key=$TERRAFORM_BACKEND_BUCKET_KEY, dynamodb_table=$TERRAFORM_BACKEND_DYNAMODB_TABLE, region=$AWS_DEFAULT_REGION"
             path: terraform
 
   build:
@@ -86,17 +104,14 @@ workflows:
   test_build_deploy:
     jobs:
       - unittest
-      - terraform-validation
-      - terraform/apply:
-          checkout: true
-          backend_config: "bucket=$TERRAFORM_BACKEND_BUCKET, key=$TERRAFORM_BACKEND_BUCKET_KEY, dynamodb_table=$TERRAFORM_BACKEND_DYNAMODB_TABLE, region=$AWS_DEFAULT_REGION"
-          path: terraform
+      - terraform_validation
+      - terraform_apply:
+          requires:
+              - terraform_validation
           filters:
             branches:
               only:
                 - main
-          requires:
-            - terraform-validation
       - build:
           requires:
             - unittest
