@@ -6,6 +6,9 @@ This project is a personal website and portfolio designed to showcase the skills
 The primary aim is to provide an attractive and interactive platform for visitors to learn more about my professional abilities, past projects, and how to get in touch with me.
 The website is developed with a responsive approach to ensure an optimal user experience on all devices, from desktop computers to mobile phones.
 
+## Visit Live Demo
+[resume.portefine.fr](https://resume.portefine.fr)
+
 ## Features
 The website includes several key features:
 
