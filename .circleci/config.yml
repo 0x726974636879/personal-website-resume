@@ -50,9 +50,6 @@ jobs:
         - terraform/plan:
             backend_config: "bucket=$TERRAFORM_BACKEND_BUCKET,key=$TERRAFORM_BACKEND_BUCKET_KEY,dynamodb_table=$TERRAFORM_BACKEND_DYNAMODB_TABLE,region=$AWS_DEFAULT_REGION"
             path: terraform
-        - terraform/apply:
-            backend_config: "bucket=$TERRAFORM_BACKEND_BUCKET, key=$TERRAFORM_BACKEND_BUCKET_KEY, dynamodb_table=$TERRAFORM_BACKEND_DYNAMODB_TABLE, region=$AWS_DEFAULT_REGION"
-            path: terraform
 
   terraform_apply:
       executor: aws-cli/default
