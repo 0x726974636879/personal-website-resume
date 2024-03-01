@@ -23,7 +23,7 @@ const LeftPanel: React.FC = () => {
         <img className="w-[35px] xl:w-[60px] m-[1vw]" src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes" title="Kubernetes"></img>
       </div>
       <h2 className="my-[2vw]" style={{"fontSize": "calc(.5vw + .5vmin + 1vh)"}}>Let's work together...</h2>
-      <a className="animate-bounce text-yellow-600" style={{"fontSize": "calc(.5vw + .5vmin + 1vh)"}} target="blank" href="https://www.linkedin.com/in/ritchyb/">How do you take your coffee?</a>
+      <a className="animate-bounce text-yellow-600" style={{"fontSize": "calc(.5vw + .5vmin + 1vh)"}} target="blank" href="https://calendly.com/ritchyblezin/prendre-contact">How do you take your coffee?</a>
     </header>
   );
 }
